@@ -1,0 +1,102 @@
+/* Inicio.css */
+
+.inicio-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  gap: 30px;
+  flex-direction: row;
+  height: 100vh;
+}
+
+
+.inicio-title-container {
+    width: 100%; 
+    padding: 0 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin: 0 auto; /* centrado */
+  }
+  
+  .inicio-title {
+    font-size: clamp(32px, 8vw, 96px); /* se adapta al ancho del viewport */
+    color: white;
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  .inicio-subtitle {
+    font-size: clamp(18px, 3vw, 28px);
+    width: 100%;
+    max-width: 900px;
+  }
+
+.inicio-services {
+  font-size: 32px;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.inicio-service-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.inicio-image-container {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔥 MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .inicio-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inicio-title-container,
+  .inicio-image-container {
+    width: 100%;
+  }
+
+  .inicio-title {
+    font-size: 60px;
+    width: 90%;
+  }
+
+  .inicio-subtitle {
+    font-size: 24px;
+    width: 90%;
+  }
+
+  .inicio-services {
+    font-size: 24px;
+    gap: 15px;
+  }
+
+  .inicio-service-item {
+    flex-direction: column;
+  }
+
+  .inicio-image {
+    max-width: 100%;
+    height: auto;
+  }
+    .inicio-image-container {
+        width: 40%;
+        margin-top: 20px;
+    }
+}

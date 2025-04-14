@@ -1,0 +1,122 @@
+/* Estilos para el contenedor principal */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background-color: #1f1f1f;
+    height: 111px;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+/* Estilos para el logo */
+.header-logo img {
+    max-width: 76px;
+    max-height: 76px;
+    transition: max-width 0.3s ease;
+}
+
+/* Menú de navegación para pantallas grandes */
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Estilos para el botón */
+.button {
+    color: white;
+    padding: 10px 20px;
+    background: linear-gradient(10deg, rgb(139, 15, 229) 0%, rgb(59, 51, 190) 100%);
+    border-radius: 8px;
+    height: 41px;
+    overflow: hidden;
+    position: relative;
+    width: 257px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+/* Menú móvil (se oculta por defecto) */
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.mobile-menu-line {
+    width: 25px;
+    height: 3px;
+    background-color: #898989;
+}
+
+/* Menú móvil siempre fijo en la parte superior */
+.navbar-mobile {
+    display: none;
+    position: fixed;
+    top: 0; /* Asegura que esté siempre en la parte superior */
+    left: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    padding: 20px 0;
+    text-align: center;
+    flex-direction: column; /* Alineación vertical de los elementos */
+    z-index: 999;
+}
+
+/* Navbar móvil cuando está abierto */
+.navbar-mobile.open {
+    display: flex; /* Mostrar el menú cuando está abierto */
+    opacity: 1;
+    max-height: 500px; /* Suficiente para mostrar los elementos */
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Ocultar el menú de navegación principal en pantallas pequeñas */
+    }
+
+    .mobile-menu-icon {
+        display: flex; /* Mostrar el ícono de menú móvil */
+    }
+
+    /* Navbar móvil base */
+    .navbar-mobile {
+        display: none;
+        position: fixed;
+        top: 80px; /* Asegura que siempre se mantenga arriba */
+        left: 0;
+        background-color: #1f1f1f;
+        width: 100%;
+        z-index: 999;
+        padding: 0;
+        opacity: 1;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Cuando el menú está abierto */
+    .navbar-mobile.open {
+        opacity: 1;
+        padding: 20px 0;
+        max-height: 500px; /* Suficiente para mostrar los elementos */
+    }
+}
