@@ -13,7 +13,11 @@ const inputBaseStyle = {
     fontFamily: "inherit",
   };
   
-  export const Input = ({ placeholder, ...props }) => {
+  interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+    placeholder?: string;
+  }
+  
+  export const Input: React.FC<InputProps> = ({ placeholder, ...props }) => {
     const [isHovered, setIsHovered] = React.useState(false);
   
     return (

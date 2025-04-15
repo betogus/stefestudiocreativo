@@ -30,7 +30,7 @@ const styles = {
     flexDirection: "column" as const,
     justifyContent: "space-around",
     alignItems: "center",
-    textAlign: "center",
+    textAlign: "center" as const,
     paddingTop: 40,
     gap: 20,
     height: "90%",
