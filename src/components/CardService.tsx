@@ -1,13 +1,16 @@
+
 const styles = {
   container: {
-    maxWidth: 500,
-    width: 500,
-    height: 650,
-    maxHeight: 650,
+    maxWidth: "90vw", 
+    width: "100%",
+    maxHeight: "45em",
+    height: "45em",
     backgroundColor: "#ffffff1a",
     border: "1px solid",
     borderColor: "#ffffff4c",
     borderRadius: 16,
+    padding: 20,
+    boxSizing: "border-box" as const,
   },
   subtitle: {
     color: "#898989",
@@ -15,24 +18,31 @@ const styles = {
     letterSpacing: "2px",
   },
   title: {
-    fontSize: 30,
+    fontSize: 24,
     color: "#FFFFFF",
   },
   description: {
-    fontSize: 18,
+    fontSize: 16,
     color: "#898989",
   },
   textContainer: {
     display: "flex",
     flexDirection: "column" as const,
-    justifyContent: "space-between", 
-    alignItems: "center", 
-    width: 400,
-    margin: "0 auto",
+    justifyContent: "space-around",
+    alignItems: "center",
     textAlign: "center",
-    paddingTop: 70,
-    height: 560,
-  }
+    paddingTop: 40,
+    gap: 20,
+    height: "90%",
+  },
+  imgContainer: {
+    width: "100%",
+  },
+  img: {
+    width: "100%",
+    height: "auto",
+    objectFit: "contain" as const,
+  },
 };
 
 interface CardProps {
@@ -51,8 +61,8 @@ const CardService = ({ service }: { service: CardProps }) => {
           <h1 style={styles.title}>{service.title}</h1>
           <p style={styles.description}>{service.description}</p>
         </div>
-        <div>
-          <img src={service.img} alt="card image" />
+        <div style={styles.imgContainer}>
+          <img style={styles.img} src={service.img} alt="card image" />
         </div>
       </div>
     </div>

@@ -1,0 +1,58 @@
+.container {
+    height: 555px;
+    background: linear-gradient(45deg, #1F1CA9 0%, #BF3378 100%);
+    display: flex;
+    padding: 100px;
+    gap: 40px;
+  }
+  
+  .text-container {
+    width: 50%;
+    color: white;
+    padding-right: 50px;
+  }
+  
+  .image-container {
+    width: 830px;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .title {
+    font-size: 72px;
+  }
+  
+  .text {
+    font-size: 24px;
+  }
+  
+  /* Imagen dinámica: la parte de width/opacity la dejamos inline en React */
+  .image {
+    object-fit: cover;
+    height: 100%;
+    display: block;
+    transition: all 0.5s ease;
+  }
+  
+  /* Layout responsive */
+  @media (max-width: 1600px) {
+    .container {
+      flex-direction: column;
+      height: 1000px;
+      padding: 60px 20px;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .text-container {
+      width: 100%;
+      padding: 0;
+    }
+  
+    
+  }
+  
