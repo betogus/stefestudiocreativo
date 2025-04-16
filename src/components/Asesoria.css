@@ -41,22 +41,26 @@
     left: 0;
   }
   
-  .asesoria-button {
-    width: 450px;
-    height: 78px;
-    border-radius: 3em;
-    border: 2px solid white;
-    color: white;
-    font-size: 36px;
-    background-color: #1B1545;
-    position: absolute;
-    z-index: 10;
-    margin-top: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
+.asesoria-button {
+  width: 100%;
+  max-width: 450px;
+  height: clamp(50px, 8vw, 78px);
+  border-radius: 3em;
+  border: 2px solid white;
+  color: white;
+  font-size: clamp(18px, 4vw, 36px);
+  background-color: #1B1545;
+  position: absolute;
+  z-index: 10;
+  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  padding: 0 20px;
+}
+  
   
   .asesoria-text-container {
     width: 50%;

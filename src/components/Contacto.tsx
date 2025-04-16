@@ -10,27 +10,33 @@ const Contacto = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
   };
 
-  const styles = {
-    container: {
-      padding: 80,
-    },
-    title: {
-      color: "white",
-      fontSize: 60,
-    },
-    text: {
-      color: "white",
-      fontSize: 24,
-    },
-    formContainer: {
-      display: "flex",
-      justifyContent: "center",
-    },
-  };
+const styles = {
+  container: {
+    padding: "clamp(1rem, 5vw, 4rem)",
+    textAlign: "center",
+  },
+  title: {
+    color: "white",
+    fontSize: "clamp(2.5rem, 5vw, 4rem)",
+    lineHeight: 1.2,
+    marginBottom: "1rem",
+  },
+  text: {
+    color: "white",
+    fontSize: "clamp(1rem, 2vw, 1.5rem)",
+    lineHeight: 1.6,
+    marginBottom: "2rem",
+  },
+  formContainer: {
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
+  },
+};
 
   return (
     <motion.div
-      style={styles.container}
+      style={{ padding: "clamp(1rem, 5vw, 4rem)", textAlign: "center" }}
       ref={ref}
       variants={fadeInUp}
       initial="hidden"

@@ -3,7 +3,7 @@ import Exito1 from "../assets/exito1.png";
 import Exito2 from "../assets/exito2.png";
 import Exito3 from "../assets/exito3.png";
 import { motion, useInView } from "framer-motion";
-import "./CasosDeExito.css"; // O './CasosDeExito.module.css' si usás módulos
+import "./CasosDeExito.css"; 
 
 const CasosDeExito = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -55,9 +55,9 @@ const CasosDeExito = () => {
             style={{
               width:
                 hoveredIndex === null
-                  ? "250px"
+                  ? "20em"
                   : hoveredIndex === index
-                  ? "830px"
+                  ? "100%"
                   : "0px",
               opacity:
                 hoveredIndex === null

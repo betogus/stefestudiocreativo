@@ -1,0 +1,32 @@
+.whatsapp-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #25D366;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .whatsapp-container:hover {
+    background-color: #4AFF8D;
+  }
+  
+  .whatsapp-icon {
+    color: white;
+    width: 46px;
+    height: 46px;
+  }
+  
+  @media (max-width: 768px) {
+    .whatsapp-container {
+      display: none;
+    }
+  }
+  

@@ -4,7 +4,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem;
     flex-wrap: wrap;
     gap: 2rem;
     width: 100%;
@@ -55,7 +54,6 @@
     .footer-container {
       flex-direction: column;
       gap: 3rem;
-      padding: 2rem;
     }
   
     .footer-title {
