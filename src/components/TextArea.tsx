@@ -17,7 +17,11 @@ const textareaStyle = {
   fontFamily: "inherit",
 };
 
-export const Textarea = React.forwardRef(({ placeholder, ...props }: any, ref) => {
+interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  placeholder?: string;
+}
+
+export const Textarea = React.forwardRef(({ placeholder, ...props }: TextareaProps, ref) => {
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const [isHovered, setIsHovered] = useState(false);
 
