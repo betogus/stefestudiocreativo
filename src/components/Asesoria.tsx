@@ -42,6 +42,7 @@ const Asesoria = () => {
             animate={isInView ? "visible" : "hidden"}
             src={AsesoriaImg}
             alt="Asesoria"
+            className="stef-img"
           />
           <motion.div
             variants={fadeInUp}
