@@ -31,8 +31,9 @@
 
 .asesoria-box {
   height: 493px;
-  width: clamp(300px, 80vw, 890px);
+  width: 890px;
   background: linear-gradient(45deg, #1f1ca9 0%, #bf3378 100%);
+  border-top-right-radius: 5rem;
   opacity: 0.7;
   position: absolute;
   z-index: -1;
@@ -40,12 +41,7 @@
   left: 0;
 }
 
-.stef-img {
-  width: clamp(400px, 50vw, 650px); 
-  height: auto; 
-  object-fit: cover; 
-  z-index: 1;
-}
+
 .asesoria-button {
   width: 100%;
   max-width: 450px;
@@ -100,6 +96,17 @@
   }
   .asesoria-nivel {
     margin-bottom: 0px;
+  }
+
+  .stef-img {
+    width: clamp(400px, 50vw, 650px); /* se adapta al ancho de la pantalla */
+    height: auto; /* mantiene proporción */
+    object-fit: contain; /* asegura que se vea bien sin recorte */
+    z-index: 1;
+  }
+
+  .asesoria-button {
+    top: 80px;
   }
 }
 
