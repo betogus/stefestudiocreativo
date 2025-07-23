@@ -42,7 +42,7 @@ const styles = {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
-      <h2 style={styles.title}>CONTACTO</h2>
+      <h2 style={styles.title}>Contacto</h2>
       <p style={styles.text}>
         Si preferís, dejános tus <b>dudas o consultas</b> a través del
         formulario y nos contactaremos con vos cuánto antes.

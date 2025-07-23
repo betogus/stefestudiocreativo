@@ -49,7 +49,7 @@
   border-radius: 3em;
   border: 2px solid white;
   color: white;
-  font-size: clamp(18px, 4vw, 36px);
+  font-size: var(--font-title-lg);
   background-color: #1b1545;
   position: absolute;
   z-index: 10;
@@ -99,9 +99,9 @@
   }
 
   .stef-img {
-    width: clamp(400px, 50vw, 650px); /* se adapta al ancho de la pantalla */
-    height: auto; /* mantiene proporción */
-    object-fit: contain; /* asegura que se vea bien sin recorte */
+    width: clamp(400px, 50vw, 650px); 
+    height: auto; 
+    object-fit: contain; 
     z-index: 1;
   }
 
@@ -114,12 +114,13 @@
   font-size: 32px;
   width: 300px;
   margin: 0;
+  margin-top: 100px;
 }
 
 .asesoria-nivel {
-  font-size: clamp(80px, 10vw, 120px); /* Tamaño dinámico */
-  gap: clamp(10px, 5vw, 40px); /* También hacemos responsive el espacio */
-  margin-top: 0;
+  font-size: clamp(80px, 10vw, 120px); 
+  gap: clamp(10px, 5vw, 40px); 
+  margin-top: 5px;
   background: linear-gradient(45deg, #1f1ca9 0%, #bf3378 100%);
   -webkit-background-clip: text;
   background-clip: text;

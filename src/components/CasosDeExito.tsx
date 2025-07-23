@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
-import Exito1 from "../assets/exito1.png";
-import Exito2 from "../assets/exito2.png";
-import Exito3 from "../assets/exito3.png";
+import Exito1 from "../assets/exito1.webp";
+import Exito2 from "../assets/exito2.webp";
+import Exito3 from "../assets/exito3.webp";
 import { motion, useInView } from "framer-motion";
 import "./CasosDeExito.css"; 
 

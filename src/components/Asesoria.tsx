@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import Vector from "../assets/Vector 44.png";
-import AsesoriaImg from "../assets/asesoria.png";
+import AsesoriaImg from "../assets/asesoria.webp";
 import Rocket from "../assets/Rocket.png";
 import { motion, useInView } from "framer-motion";
 import "./Asesoria.css";
@@ -27,12 +27,12 @@ const Asesoria = () => {
   
   return (
     <section className="asesoria-container">
-      <img
-        className="asesoria-vector"
-        src={Vector}
-        loading="lazy"
-        alt="asesoria"
-      />
+    <img
+      className="asesoria-vector"
+      src={Vector}
+      loading="lazy"
+      alt="asesoria"
+    />
       <div className="asesoria-subcontainer" ref={ref}>
         <motion.div
           variants={fadeInRight}
@@ -69,7 +69,7 @@ const Asesoria = () => {
         >
           <h2 className="asesoria-text">Llevemos tu idea al siguiente</h2>
           <h1 className="asesoria-nivel">
-            Nivel <img src={Rocket} alt="Rocket" loading="lazy" />
+            Nivel <img src={Rocket} alt="Rocket" loading="lazy"/>
           </h1>
         </motion.div>
       </div>

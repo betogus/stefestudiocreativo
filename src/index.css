@@ -4,5 +4,12 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  width: 100%;
+  width: 100vw;
+}
+
+:root {
+  --font-title-xl: clamp(22px, 5vw, 56px);
+  --font-title-lg: clamp(20px, 4vw, 36px);
+  --font-title-md: clamp(16px, 3vw, 24px);
+  --font-body: clamp(14px, 2vw, 18px);
 }

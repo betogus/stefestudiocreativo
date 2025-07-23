@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import InicioImg from "../assets/inicio.png";
-import Branding from "../assets/bi_pen.png";
-import WebDesign from "../assets/Group.png";
-import GraphicDesign from "../assets/mdi_paint-outline.png";
+import InicioImg from "../assets/inicio.webp";
+import Branding from "../assets/Branding.png";
+import WebDesign from "../assets/Diseño Web.png";
+import GraphicDesign from "../assets/Diseño Gráfico.png";
 import "./Inicio.css";
 
 const Inicio = () => {
@@ -41,31 +41,21 @@ const Inicio = () => {
           animate="visible"
         >
           <li className="inicio-service-item">
-            <img src={Branding} alt="Branding" loading="lazy" />
+            <img src={Branding} alt="Branding" loading="lazy"/>
             <a>Branding</a>
           </li>
           <li className="inicio-service-item">
-            <img src={WebDesign} alt="Diseño Web" loading="lazy" />
+            <img src={WebDesign} alt="Diseño Web" loading="lazy"/>
             <a>Diseño Web</a>
           </li>
           <li className="inicio-service-item">
-            <img src={GraphicDesign} alt="Diseño Gráfico" loading="lazy" />
+            <img src={GraphicDesign} alt="Diseño Gráfico" loading="lazy"/>
             <a>Diseño Gráfico</a>
           </li>
         </motion.ul>
       </div>
-      <motion.div
-        variants={fadeInUp}
-        initial="hidden"
-        animate="visible"
-        className="inicio-image-container"
-      >
-        <img
-          src={InicioImg}
-          alt="inicio"
-          className="inicio-image"
-          loading="lazy"
-        />
+      <motion.div variants={fadeInUp} initial="hidden" animate="visible" className="inicio-image-container">
+        <img src={InicioImg} alt="inicio" className="inicio-image" loading="lazy"/>
       </motion.div>
     </section>
   );
