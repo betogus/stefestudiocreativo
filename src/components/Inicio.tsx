@@ -12,7 +12,7 @@ const Inicio = () => {
   };
 
   return (
-    <div className="inicio-container">
+    <section className="inicio-container">
       <div className="inicio-title-container">
         <motion.h1
           className="inicio-title"
@@ -41,23 +41,33 @@ const Inicio = () => {
           animate="visible"
         >
           <li className="inicio-service-item">
-            <img src={Branding} alt="Branding" />
+            <img src={Branding} alt="Branding" loading="lazy" />
             <a>Branding</a>
           </li>
           <li className="inicio-service-item">
-            <img src={WebDesign} alt="Diseño Web" />
+            <img src={WebDesign} alt="Diseño Web" loading="lazy" />
             <a>Diseño Web</a>
           </li>
           <li className="inicio-service-item">
-            <img src={GraphicDesign} alt="Diseño Gráfico" />
+            <img src={GraphicDesign} alt="Diseño Gráfico" loading="lazy" />
             <a>Diseño Gráfico</a>
           </li>
         </motion.ul>
       </div>
-      <motion.div variants={fadeInUp} initial="hidden" animate="visible" className="inicio-image-container">
-        <img src={InicioImg} alt="inicio" className="inicio-image" />
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        animate="visible"
+        className="inicio-image-container"
+      >
+        <img
+          src={InicioImg}
+          alt="inicio"
+          className="inicio-image"
+          loading="lazy"
+        />
       </motion.div>
-    </div>
+    </section>
   );
 };
 

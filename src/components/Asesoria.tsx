@@ -26,8 +26,13 @@ const Asesoria = () => {
   };
   
   return (
-    <div className="asesoria-container">
-      <img className="asesoria-vector" src={Vector} />
+    <section className="asesoria-container">
+      <img
+        className="asesoria-vector"
+        src={Vector}
+        loading="lazy"
+        alt="asesoria"
+      />
       <div className="asesoria-subcontainer" ref={ref}>
         <motion.div
           variants={fadeInRight}
@@ -43,6 +48,7 @@ const Asesoria = () => {
             src={AsesoriaImg}
             alt="Asesoria"
             className="stef-img"
+            loading="lazy"
           />
           <motion.div
             variants={fadeInUp}
@@ -63,11 +69,11 @@ const Asesoria = () => {
         >
           <h2 className="asesoria-text">Llevemos tu idea al siguiente</h2>
           <h1 className="asesoria-nivel">
-            Nivel <img src={Rocket} alt="Rocket" />
+            Nivel <img src={Rocket} alt="Rocket" loading="lazy" />
           </h1>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

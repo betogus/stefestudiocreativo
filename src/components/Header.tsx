@@ -83,7 +83,7 @@ const Header = ({
       animate={showHeader ? "visible" : "hidden"}
     >
       <div className="header-logo">
-        <img src={Logo} alt="Logo" />
+        <img src={Logo} alt="Logo" loading="lazy" />
       </div>
 
       {/* Icono de menú móvil */}
@@ -137,8 +137,9 @@ const Header = ({
       </ul>
       {!isMobile && (
         <div>
-          <div className="button" onClick={handleWhatsapp}
-          >Pedí tu asesoría GRATIS</div>
+          <div className="button" onClick={handleWhatsapp}>
+            Pedí tu asesoría GRATIS
+          </div>
         </div>
       )}
     </motion.div>

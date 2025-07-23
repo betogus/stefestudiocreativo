@@ -22,14 +22,14 @@ const CasosDeExito = () => {
   const images = [Exito1, Exito2, Exito3];
 
   return (
-    <div className="container" ref={ref}>
+    <section className="container" ref={ref}>
       <motion.div
         variants={fadeInRight}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         className="text-container"
       >
-        <h1 className="title">Casos de Éxito</h1>
+        <h2 className="title">Casos de Éxito</h2>
         <p className="text">
           En Stef Estudio Creativo, nos llena de orgullo trabajar junto a
           clientes que <b>confían en nuestra experiencia y creatividad</b>.
@@ -52,6 +52,7 @@ const CasosDeExito = () => {
             src={src}
             alt={`Exito ${index + 1}`}
             className="image"
+            loading="lazy"
             style={{
               width:
                 hoveredIndex === null
@@ -60,18 +61,14 @@ const CasosDeExito = () => {
                   ? "100%"
                   : "0px",
               opacity:
-                hoveredIndex === null
-                  ? 1
-                  : hoveredIndex === index
-                  ? 1
-                  : 0,
+                hoveredIndex === null ? 1 : hoveredIndex === index ? 1 : 0,
             }}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           />
         ))}
       </motion.div>
-    </div>
+    </section>
   );
 };
 

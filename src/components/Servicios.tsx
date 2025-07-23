@@ -47,12 +47,14 @@ const Servicios = () => {
   const prevSlide = () => setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
 
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>NUESTROS SERVICIOS</h1>
+    <section style={styles.container}>
+      <h2 style={styles.title}>NUESTROS SERVICIOS</h2>
 
       {isCarousel ? (
         <div style={styles.carousel}>
-          <button onClick={prevSlide} style={styles.navButton}>◀</button>
+          <button onClick={prevSlide} style={styles.navButton}>
+            ◀
+          </button>
           <div style={styles.sliderWrapper}>
             <div
               style={{
@@ -75,18 +77,23 @@ const Servicios = () => {
               ))}
             </div>
           </div>
-          <button onClick={nextSlide} style={styles.navButton}>▶</button>
+          <button onClick={nextSlide} style={styles.navButton}>
+            ▶
+          </button>
         </div>
       ) : (
         <div style={styles.flexGroup}>
           {services.map((service, index) => (
-            <div style={{ flex: "1", margin: "0 10px", maxWidth: "32%" }} key={index}>
+            <div
+              style={{ flex: "1", margin: "0 10px", maxWidth: "32%" }}
+              key={index}
+            >
               <CardService service={service} />
             </div>
           ))}
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

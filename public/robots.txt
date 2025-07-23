@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stefestudiocreativo.netlify.app/sitemap.xml
