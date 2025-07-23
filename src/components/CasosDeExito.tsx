@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
-import Exito1 from "../assets/exito1.png";
-import Exito2 from "../assets/exito2.png";
-import Exito3 from "../assets/exito3.png";
+import Exito1 from "../assets/exito1.webp";
+import Exito2 from "../assets/exito2.webp";
+import Exito3 from "../assets/exito3.webp";
 import { motion, useInView } from "framer-motion";
 import "./CasosDeExito.css"; 
 
@@ -22,14 +22,14 @@ const CasosDeExito = () => {
   const images = [Exito1, Exito2, Exito3];
 
   return (
-    <div className="container" ref={ref}>
+    <section className="container" ref={ref}>
       <motion.div
         variants={fadeInRight}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         className="text-container"
       >
-        <h1 className="title">Casos de Éxito</h1>
+        <h2 className="title">Casos de Éxito</h2>
         <p className="text">
           En Stef Estudio Creativo, nos llena de orgullo trabajar junto a
           clientes que <b>confían en nuestra experiencia y creatividad</b>.
@@ -52,6 +52,7 @@ const CasosDeExito = () => {
             src={src}
             alt={`Exito ${index + 1}`}
             className="image"
+            loading="lazy"
             style={{
               width:
                 hoveredIndex === null
@@ -71,7 +72,7 @@ const CasosDeExito = () => {
           />
         ))}
       </motion.div>
-    </div>
+    </section>
   );
 };
 

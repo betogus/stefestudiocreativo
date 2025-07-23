@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import CardService from "./CardService";
-import Branding from "../assets/Andes dean web 2.png";
-import WebDesign from "../assets/Frame 61.png";
-import GraphicDesign from "../assets/Group 99.png";
+import Branding from "../assets/Branding - Marca.webp";
+import WebDesign from "../assets/Diseño de Páginas Web.webp";
+import GraphicDesign from "../assets/Contenido para Redes.webp";
 import useWindowWidth from "../hooks/useWindowWidth";
 
 const services = [

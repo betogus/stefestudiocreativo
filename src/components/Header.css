@@ -1,4 +1,3 @@
-/* Estilos para el contenedor principal */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -13,14 +12,12 @@
     box-sizing: border-box;
 }
 
-/* Estilos para el logo */
 .header-logo img {
     max-width: 76px;
     max-height: 76px;
     transition: max-width 0.3s ease;
 }
 
-/* Menú de navegación para pantallas grandes */
 .navbar {
     list-style: none;
     display: flex;
@@ -31,7 +28,6 @@
     cursor: pointer;
 }
 
-/* Estilos para el botón */
 .button {
     color: white;
     padding: 10px 20px;
@@ -50,7 +46,6 @@
     transition: opacity 0.2s ease;
 }
 
-/* Menú móvil (se oculta por defecto) */
 .mobile-menu-icon {
     display: none;
     flex-direction: column;
@@ -64,44 +59,40 @@
     background-color: #898989;
 }
 
-/* Menú móvil siempre fijo en la parte superior */
 .navbar-mobile {
     display: none;
     position: fixed;
-    top: 0; /* Asegura que esté siempre en la parte superior */
+    top: 0; 
     left: 0;
     width: 100%;
     background-color: #1f1f1f;
     padding: 20px 0;
     text-align: center;
-    flex-direction: column; /* Alineación vertical de los elementos */
+    flex-direction: column; 
     z-index: 999;
 }
 
-/* Navbar móvil cuando está abierto */
 .navbar-mobile.open {
-    display: flex; /* Mostrar el menú cuando está abierto */
+    display: flex; 
     opacity: 1;
-    max-height: 500px; /* Suficiente para mostrar los elementos */
+    max-height: 500px; 
     padding: 20px 0;
     transition: all 0.3s ease-in-out;
 }
 
-/* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
     .navbar {
-        display: none; /* Ocultar el menú de navegación principal en pantallas pequeñas */
+        display: none;
     }
 
     .mobile-menu-icon {
-        display: flex; /* Mostrar el ícono de menú móvil */
+        display: flex; 
     }
 
-    /* Navbar móvil base */
     .navbar-mobile {
         display: none;
         position: fixed;
-        top: 80px; /* Asegura que siempre se mantenga arriba */
+        top: 80px; 
         left: 0;
         background-color: #1f1f1f;
         width: 100%;
@@ -113,10 +104,9 @@
         transition: all 0.3s ease-in-out;
     }
 
-    /* Cuando el menú está abierto */
     .navbar-mobile.open {
         opacity: 1;
         padding: 20px 0;
-        max-height: 500px; /* Suficiente para mostrar los elementos */
+        max-height: 500px; 
     }
 }

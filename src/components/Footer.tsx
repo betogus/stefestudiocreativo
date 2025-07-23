@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.webp";
 import { FaInstagram } from "react-icons/fa";
 import { PiTiktokLogoLight } from "react-icons/pi";
 import { motion, useInView } from "framer-motion";
@@ -14,7 +14,7 @@ const Footer = () => {
   };
 
   return (
-    <motion.div
+    <motion.footer
       variants={fadeInUp}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-inner">
-        <img src={Logo} alt="logo" className="footer-logo" />
+        <img src={Logo} alt="logo" className="footer-logo" loading="lazy"/>
       </div>
       <div className="footer-inner">
         <h3 className="footer-title">Seguinos</h3>
@@ -44,7 +44,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </motion.div>
+    </motion.footer>
   );
 };
 

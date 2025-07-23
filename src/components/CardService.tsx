@@ -3,7 +3,7 @@ const styles = {
   container: {
     maxWidth: "90vw", 
     width: "100%",
-    maxHeight: "45em",
+    maxHeight: "40em",
     height: "45em",
     backgroundColor: "#ffffff1a",
     border: "1px solid",
@@ -62,7 +62,12 @@ const CardService = ({ service }: { service: CardProps }) => {
           <p style={styles.description}>{service.description}</p>
         </div>
         <div style={styles.imgContainer}>
-          <img style={styles.img} src={service.img} alt="card image" />
+        <img
+            style={styles.img}
+            src={service.img}
+            alt="card image"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>

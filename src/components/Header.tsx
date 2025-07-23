@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.webp";
 import { motion } from "framer-motion";
-import "./Header.css"; // Importamos el archivo CSS
+import "./Header.css"; 
 
 interface HeaderProps {
   onInicio: () => void;
@@ -76,14 +76,14 @@ const Header = ({
   });
 
   return (
-    <motion.div
+    <motion.header
       className="header-container"
       variants={fadeInDOwn}
       initial="hidden"
       animate={showHeader ? "visible" : "hidden"}
     >
       <div className="header-logo">
-        <img src={Logo} alt="Logo" />
+        <img src={Logo} alt="Logo" loading="lazy"/>
       </div>
 
       {/* Icono de menú móvil */}
@@ -117,7 +117,6 @@ const Header = ({
         ))}
       </ul>
 
-      {/* Menú móvil (en pantallas pequeñas) */}
       <ul className={`navbar-mobile ${isMobileMenuOpen ? "open" : ""}`}>
         {[
           { name: "inicio", onClick: onInicio },
@@ -141,7 +140,7 @@ const Header = ({
           >Pedí tu asesoría GRATIS</div>
         </div>
       )}
-    </motion.div>
+    </motion.header>
   );
 };
 

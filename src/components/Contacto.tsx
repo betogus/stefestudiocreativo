@@ -35,14 +35,14 @@ const styles = {
 };
 
   return (
-    <motion.div
+    <motion.section
       style={{ padding: "clamp(1rem, 5vw, 4rem)", textAlign: "center" }}
       ref={ref}
       variants={fadeInUp}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
-      <h1 style={styles.title}>CONTACTO</h1>
+      <h2 style={styles.title}>Contacto</h2>
       <p style={styles.text}>
         Si preferís, dejános tus <b>dudas o consultas</b> a través del
         formulario y nos contactaremos con vos cuánto antes.
@@ -51,7 +51,7 @@ const styles = {
       <div style={styles.formContainer}>
         <Form />
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 
